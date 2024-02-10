@@ -1,7 +1,7 @@
-def call(String gitUrl, String gitBranch){
+def call(String gitUrl, String gitBranch) {
     checkout([
         $class: 'GitSCM',
-        braches: [[name: gitBranch]],
-        userRemoteConfigs: [[gitUrl]]
+        branches: [[name: gitBranch]],
+        userRemoteConfigs: [[url: gitUrl]]
     ])
 }
